@@ -1,0 +1,2 @@
+pass tcp any any -> any 3399(pcre:"/login|Initial/";flowbits:set,zzyhw;sid:1000000;)
+alert tcp any any -> any 3399(msg:"bot founded"; pcre:"/(((25[0-5]|2[0-4]\d)|[1]?\d{1,2})(\.((25[0-5]|2[0-4]\d)|[1]?\d{1,2})){3}):((6553[0-5])|(655[0-2]\d{1})|(65[0-4]\d{2})|(6[0-4]\d{3})|([1-5]?\d{1,4}))/";flowbits:isset,zzyhw;sid:1000001;)
